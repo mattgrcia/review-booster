@@ -9,12 +9,12 @@ import smtplib
 class Emailer:
     def __init__(
         self,
-        to_addresses,
+        to_address,
         from_address=os.environ.get("GMAIL_ADDRESS"),
         password=os.environ.get("GMAIL_APP_PASSWORD"),
     ):
 
-        self.to_address = to_addresses
+        self.to_address = to_address
         self.from_address = from_address
         self.password = password
 

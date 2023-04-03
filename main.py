@@ -24,20 +24,10 @@ def main():
     ]
     print("done!\n")
 
-    # Filter delivered shipments for only those that were created in the last week
-    print("\nFiltering for shipments created in the last week...", end="")
-    recent_delivered_shipments = [
-        shipment
-        for shipment in delivered_shipments
-        if datetime.datetime.strptime(shipment["createDate"], "%Y-%m-%dT%H:%M:%S.%f0")
-        > datetime.datetime.now() - datetime.timedelta(days=8)
-    ]
-    print("done!\n")
-
     # Filter delivered shipments created in the last week for those with orders created in the last week
     print("\nFiltering for orders within the last week...", end="")
     good_shipments = []
-    for shipment in tqdm(recent_delivered_shipments, position=0, leave=True):
+    for shipment in tqdm(delivered_shipments, position=0, leave=True):
 
         order_response = shipstation.get_order(shipment["orderId"])
         order_date = datetime.datetime.strptime(
@@ -140,7 +130,7 @@ def main():
     print("done!\n")
 
     # Sending email to relevant parties
-    emailer = Emailer(to_addresses=["matt@jmac.com"])
+    emailer = Emailer(to_address="matt@jmac.com")
     print("\nSending email...", end="")
     subject = "ShipStation Daily Report"
     body = f"""

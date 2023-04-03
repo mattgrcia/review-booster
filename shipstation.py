@@ -27,7 +27,7 @@ class Shipstation:
 
     def get_shipment_pages(self):
 
-        endpoint = "https://ssapi.shipstation.com/shipments"
+        endpoint = "https://ssapi.shipstation.com/shipments?createDateStart=2023-03-22"
         response_dict = json.loads(requests.get(endpoint, headers=self.headers).text)
         num_pages = response_dict["pages"]
 
@@ -40,7 +40,7 @@ class Shipstation:
         for page in tqdm(
             range(1, self.get_shipment_pages() + 1), position=0, leave=True
         ):
-            endpoint = f"https://ssapi.shipstation.com/shipments?page={page}"
+            endpoint = f"https://ssapi.shipstation.com/shipments?createDateStart=2023-03-22&page={page}"
             response_dict = json.loads(
                 requests.get(endpoint, headers=self.headers).text
             )
