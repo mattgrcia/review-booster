@@ -27,7 +27,9 @@ To get started, you can just install from the requirements.txt file, or you may 
 `
 pip install -r requirements.txt
 `
+
 OR
+
 `
 pip install usps-api
 `
