@@ -1,4 +1,4 @@
-### Get Customer Reviews
+### Background
 
 The goal behind this project is twofold:
 
@@ -7,7 +7,8 @@ The goal behind this project is twofold:
 
 The thinking behind this approach is that successful deliveries breed happier customers, and thus, these may make up a segment of customers from which reviews may be more abundantly (especially in the positive) given.
 
-Requirements:
+### Requirements
+
 You will need API credentials (and potentially, accounts) from the following organizations.
 
 [USPS](https://www.usps.com/business/web-tools-apis/)
@@ -19,7 +20,8 @@ You will need API credentials (and potentially, accounts) from the following org
 [MailChimp](https://mailchimp.com/)
 
 
-Installation:
+### Installation
+
 To get started, you can just install from the requirements.txt file, or you may choose to stick with your own environment versions of packages, in which case, the one package that you will most likely need to add would be from USPS.
 
 `
@@ -29,6 +31,8 @@ OR
 `
 pip install usps-api
 `
+
+# Functionality
 
 The order of operations is as follows:
 1. Get all shipments from ShipStation
