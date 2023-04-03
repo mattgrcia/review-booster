@@ -32,7 +32,7 @@ OR
 pip install usps-api
 `
 
-# Functionality
+### Functionality
 
 The order of operations is as follows:
 1. Get all shipments from ShipStation
