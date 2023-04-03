@@ -12,11 +12,8 @@ The thinking behind this approach is that successful deliveries breed happier cu
 You will need API credentials (and potentially, accounts) from the following organizations.
 
 [USPS](https://www.usps.com/business/web-tools-apis/)
-
 [UPS](https://www.ups.com/upsdeveloperkit?loc=en_US)
-
 [ShipStation](https://ship9.shipstation.com/settings/api)
-
 [MailChimp](https://mailchimp.com/)
 
 
