@@ -9,12 +9,10 @@ The thinking behind this approach is that successful deliveries breed happier cu
 
 Requirements:
 You will need API credentials (and potentially, accounts) from the following organizations.
-`
 [USPS](https://www.usps.com/business/web-tools-apis/)
 [UPS](https://www.ups.com/upsdeveloperkit?loc=en_US)
 [ShipStation](https://ship9.shipstation.com/settings/api)
 [MailChimp](https://mailchimp.com/)
-`
 
 Installation:
 To get started, you can just install from the requirements.txt file, or you may choose to stick with your own environment versions of packages, in which case, the one package that you will most likely need to add would be from USPS.
